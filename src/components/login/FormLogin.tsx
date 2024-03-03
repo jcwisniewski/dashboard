@@ -1,6 +1,6 @@
 import GoogleIcon from "../icons/GoogleIcon";
 
-export default function FormLogin() {
+export default async function FormLogin() {
   return (
     <form className="max-w-sm mx-auto mt-20">
       <div className="mb-5">
