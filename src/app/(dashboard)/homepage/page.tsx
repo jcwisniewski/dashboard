@@ -5,7 +5,13 @@ export default function Homepage() {
   return (
     <>
       <Header />
-      <Drawer />
+      <div className="flex w-full bg-blue-60">
+        <Drawer />
+        <div className="flex  flex-col p-10 w-full  align-baseline">
+          <h1 className="text-[2rem] text-white">Dashboard</h1>
+          <span> Welcome, User!</span>
+        </div>
+      </div>
     </>
   );
 }

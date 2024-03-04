@@ -9,6 +9,7 @@ import CartBuyIcon from "../icons/CartBuy";
 import MoneyIcon from "../icons/MoneyIcon";
 import { redirect, usePathname } from "next/navigation";
 import Link from "next/link";
+import HomeIcon from "../icons/HomeIcon";
 
 type MenuTypes = {
   name: string;
@@ -21,12 +22,18 @@ export default function Drawer() {
   const path = usePathname();
   const menus: MenuTypes = [
     {
+      name: "Dashboard",
+      icon: <HomeIcon w="30px" h="30px" color="#FFFFFF" />,
+      pathName: "/homepage",
+      current: true,
+    },
+    {
       name: "Perfil",
       icon: (
         <UserIcon w="30px" h="30px" color="#FFFFFF" strokeColor="#FFFFFF" />
       ),
       pathName: "/profile",
-      current: true,
+      current: false,
     },
     {
       name: "Clientes",
@@ -78,7 +85,7 @@ export default function Drawer() {
   });
   return (
     <>
-      <div className="p-4 fixed  text-white  w-[40%] sm:w-[30%] md:w-[30%] lg:w-[20%] h-screen  bg-blue-10">
+      <div className="flex flex-col p-4  text-white  w-[40%] sm:w-[30%] md:w-[30%] lg:w-[20%] h-full  bg-blue-10">
         <div>
           {menus &&
             menus.map((menu: any, index: any) => (
