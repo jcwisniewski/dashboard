@@ -85,7 +85,10 @@ export default function Drawer() {
   });
   return (
     <>
-      <div className="flex flex-col p-4  text-white  w-[40%] sm:w-[30%] md:w-[30%] lg:w-[20%] h-full  bg-blue-10">
+      <div
+        className="flex flex-col rounded-sm p-4 text-white-normal w-[40%] sm:w-[30%] md:w-[30%] lg:w-[20%] bg-blue-10 overflow-y-auto"
+        style={{ height: `calc(100vh - 2.5rem)` }}
+      >
         <div>
           {menus &&
             menus.map((menu: any, index: any) => (

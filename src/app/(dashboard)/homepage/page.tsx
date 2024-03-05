@@ -1,15 +1,18 @@
 import Drawer from "@/components/Layouts/Drawer";
 import Header from "@/components/Layouts/Header";
+import Summary from "@/components/dashboard/Summary";
+import Welcome from "@/components/dashboard/Welcome";
 
 export default function Homepage() {
+  const data = { user: "Julaio" };
   return (
     <>
       <Header />
-      <div className="flex w-full bg-blue-60">
+      <div className=" flex bg-white ">
         <Drawer />
-        <div className="flex  flex-col p-10 w-full  align-baseline">
-          <h1 className="text-[2rem] text-white">Dashboard</h1>
-          <span> Welcome, User!</span>
+        <div className="flex flex-1 flex-col p-10 overflow-auto">
+          <Welcome user={data.user} />
+          <Summary />
         </div>
       </div>
     </>
